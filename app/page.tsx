@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import BannerStats from "./components/BannerStats";
 import ExperienceSection from "./components/ExperienceSection";
+import ContactSection from "./components/ContactSection";
 
 export default function Home() {
   return (
@@ -23,6 +24,9 @@ export default function Home() {
 
     <ExperienceSection>
     </ExperienceSection>
+
+    <ContactSection>
+    </ContactSection>
     
     </>
   );

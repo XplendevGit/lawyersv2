@@ -42,7 +42,7 @@ export default function ExperienceSection() {
                 </svg>
               ),
               title: "Strategic",
-              description: "Providing clear strategies to navigate legal challenges.",
+              description: "Providing clear strategies to effectively navigate legal challenges.",
             },
             {
               icon: (
@@ -57,7 +57,7 @@ export default function ExperienceSection() {
                 </svg>
               ),
               title: "Contractual",
-              description: "Expertise in handling complex contractual matters.",
+              description: "Expertise in efficiently handling complex contractual matters with precision.",
             },
             {
               icon: (
@@ -72,7 +72,7 @@ export default function ExperienceSection() {
                 </svg>
               ),
               title: "Solutions",
-              description: "Delivering effective solutions for your legal needs.",
+              description: "Delivering tailored and effective solutions for all your legal needs.",
             },
           ].map((item, index) => (
             <motion.div
@@ -99,13 +99,14 @@ export default function ExperienceSection() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="relative w-full h-80 lg:h-full rounded-lg overflow-hidden shadow-lg">
+        <div className="relative w-full h-80 lg:h-full bg-transparent overflow-hidden flex justify-center object-center mx-auto">
           <Image
-            src="https://i.postimg.cc/zGr2N9Xs/trust1.png"
+            src="https://i.postimg.cc/rmwFPnrW/trust-2.png"
             alt="Experienced Lawyer"
-            layout="fill"
+            width={400}
+            height={600}
             objectFit="cover"
-            className="rounded-lg"
+            className=""
           />
         </div>
       </motion.div>
