@@ -103,7 +103,7 @@ export default function Inicio() {
         ].map((item, index) => (
           <motion.div
             key={index}
-            className="flex flex-col items-center text-center p-4 bg-dark-blue bg-opacity-80 rounded-lg hover:shadow-lg transition-shadow"
+            className="flex flex-col items-center text-center p-8 bg-dark-blue bg-opacity-80 rounded-lg hover:shadow-sm hover:shadow-gold-dark transition-shadow duration-100 border-[1px] border-transparent hover:border-gold-dark"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 + index * 0.1 }}

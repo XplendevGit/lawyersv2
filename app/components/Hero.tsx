@@ -16,7 +16,7 @@ export default function Hero() {
         <p className="text-sm text-gray-500 uppercase tracking-wide">
           Your business is safe with us
         </p>
-        <h1 className="text-4xl md:text-5xl font-bold text-dark-blue leading-tight">
+        <h1 className="text-4xl md:text-5xl text-center md:text-start font-bold text-dark-blue leading-tight">
           Committed to <span className="text-gold-dark">Your Business</span>
         </h1>
         <p className="mt-4 text-gray-700 text-lg">
@@ -28,7 +28,7 @@ export default function Hero() {
           {[
             {
               icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" className="text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" className="text-white">
                   <path d="M12 2L2 7v7c0 6 6 10 10 10s10-4 10-10V7l-10-5zm0 2.18l8 4v6c0 4.42-3.58 8-8 8s-8-3.58-8-8v-6l8-4z" />
                   <path d="M11 14h2v2h-2zm0-7h2v5h-2z" />
                 </svg>
@@ -39,7 +39,7 @@ export default function Hero() {
             },
             {
               icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" className="text-dark-blue">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" className="text-dark-blue">
                   <path d="M12 2L4.5 8l.5 8 7 4 7-4 .5-8L12 2zm0 2.47l5.5 4.01-.39 5.69-5.11 2.92L6.89 14.2 6.5 8.47 12 4.47z" />
                 </svg>
               ),
@@ -49,7 +49,7 @@ export default function Hero() {
             },
             {
               icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" className="text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" className="text-white">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14h-2v-6h2v6zm4 0h-2v-4h2v4z" />
                 </svg>
               ),
@@ -59,7 +59,7 @@ export default function Hero() {
             },
             {
               icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" className="text-dark-blue">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" className="text-dark-blue">
                   <path d="M12 2l1.45 4.62h4.85l-3.93 2.86 1.51 4.62-3.88-2.8-3.88 2.8 1.51-4.62L5.7 6.62h4.85L12 2z" />
                 </svg>
               ),
@@ -70,7 +70,7 @@ export default function Hero() {
           ].map((item, index) => (
             <motion.div
               key={index}
-              className={`flex items-start p-4 rounded-lg ${item.bgColor} bg-opacity-80`}
+              className={`flex items-center p-4 rounded-lg ${item.bgColor} bg-opacity-80`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 * index }}

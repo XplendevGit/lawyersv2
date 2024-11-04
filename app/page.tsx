@@ -2,6 +2,8 @@
 import Inicio from "./components/Inicio";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import BannerStats from "./components/BannerStats";
+import ExperienceSection from "./components/ExperienceSection";
 
 export default function Home() {
   return (
@@ -14,8 +16,13 @@ export default function Home() {
     </Inicio>
 
     <Hero>
-      
     </Hero>
+
+    <BannerStats>
+    </BannerStats>
+
+    <ExperienceSection>
+    </ExperienceSection>
     
     </>
   );
