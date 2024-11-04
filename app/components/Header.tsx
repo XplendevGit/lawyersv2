@@ -10,7 +10,7 @@ export default function Header() {
 
   return (
     <motion.header
-      className="fixed w-full bg-dark-blue text-white shadow-md z-50"
+      className="fixed w-full bg-dark-blue text-white z-50 shadow-md"
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -18,8 +18,14 @@ export default function Header() {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <motion.div className="flex items-center space-x-2" whileHover={{ scale: 1.05 }}>
-          <Image src="/logo.png" alt="Law Firm Logo" width={40} height={40} />
-          <span className="text-xl font-semibold">LAW FIRM</span>
+          <Image 
+            className="w-[100px] h-auto md:w-[120px]" // Ajuste de tamaño para dispositivos móviles
+            src="https://i.postimg.cc/wjQspNGQ/logo0.png" 
+            alt="Law Firm Logo" 
+            width={450} 
+            height={450} 
+            priority={true}
+          />
         </motion.div>
 
         {/* Desktop Navigation */}
@@ -28,7 +34,7 @@ export default function Header() {
             <motion.a
               key={index}
               href={`#${item.toLowerCase()}`}
-              className="hover:text-gray-300"
+              className="hover:text-gray-300 transition-all duration-200"
               whileHover={{ scale: 1.1 }}
             >
               {item.toUpperCase()}
@@ -59,16 +65,16 @@ export default function Header() {
       {/* Mobile Menu */}
       {isOpen && (
         <motion.nav
-          className="md:hidden bg-dark-blue text-center space-y-4 py-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          className="md:hidden bg-dark-blue text-center space-y-4 py-4 absolute w-full top-full shadow-lg"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
           {['Home', 'Services', 'About', 'Contact'].map((item, index) => (
             <a
               key={index}
               href={`#${item.toLowerCase()}`}
-              className="block text-lg font-semibold hover:text-gray-300"
+              className="block text-lg font-semibold hover:text-gray-300 transition-all duration-200"
               onClick={() => setIsOpen(false)}
             >
               {item.toUpperCase()}
@@ -76,7 +82,7 @@ export default function Header() {
           ))}
           <a
             href="#contact"
-            className="bg-gold text-dark-blue px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition block mx-auto mt-2"
+            className="bg-gold text-dark-blue px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition block mx-auto mt-2 w-3/4"
             onClick={() => setIsOpen(false)}
           >
             CONTACT

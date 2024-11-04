@@ -5,77 +5,113 @@ import Image from 'next/image';
 
 export default function Inicio() {
   return (
-    <motion.section
-      className="relative h-screen text-white flex flex-col items-center justify-between"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
+    <section className="relative h-screen text-white flex flex-col items-start justify-center px-6 md:px-10 lg:px-20">
       {/* Imagen de Fondo */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="https://i.postimg.cc/C1Z7vJxK/law-bg1.jpg"
-          alt="Background Building"
+          src="https://i.postimg.cc/rwKv6Gmv/bg-2.jpg"
+          alt="Background Lawyer"
           layout="fill"
           objectFit="cover"
           quality={100}
-          className="opacity-70"
         />
       </div>
 
-      {/* Encabezado Central */}
-      <div className="flex flex-col items-center text-center mt-20 lg:mt-32 px-6 max-w-3xl">
+      {/* Título y Subtítulo */}
+      <div className="max-w-lg md:max-w-xl lg:max-w-2xl">
         <motion.h1
-          className="text-4xl md:text-5xl lg:text-6xl font-bold"
+          className="text-3xl md:text-5xl lg:text-6xl font-bold text-gold-dark"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          COMMITTED TO JUSTICE <br /> AND EXCELLENCE
+          We’re Built on Relationships
         </motion.h1>
         <motion.p
-          className="mt-4 text-sm md:text-base lg:text-lg max-w-xl text-gray-300"
+          className="mt-4 text-base md:text-lg lg:text-xl text-gray-200"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          We provide a wide range of legal services to meet your needs. Our team of experienced attorneys is committed to upholding the highest standards of excellence in every case.
+          With decades of experience, we provide strategic and personalized legal solutions. Our commitment is to protect our clients interests with integrity and excellence, building trusted relationships and delivering exceptional results.
         </motion.p>
 
-        {/* Botón Central */}
-        <motion.a
-          href="#contact"
-          className="mt-8 bg-gold text-dark-blue px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition"
-          initial={{ scale: 0.9 }}
-          animate={{ scale: 1 }}
-          transition={{ delay: 0.7 }}
-        >
-          CONTACT US
-        </motion.a>
+        {/* Botones */}
+        <div className="mt-6 flex flex-wrap gap-4">
+          <motion.a
+            href="#services"
+            className="bg-gold-dark text-white px-4 py-2 rounded-full font-semibold hover:bg-gold-light transition"
+            initial={{ scale: 0.9 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.7 }}
+          >
+            Legal Services
+          </motion.a>
+          <motion.a
+            href="#meet"
+            className="bg-dark-blue px-4 py-2 rounded-full font-semibold text-white hover:bg-blue-dark transition"
+            initial={{ scale: 0.9 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.7 }}
+          >
+            Meet & Discuss
+          </motion.a>
+        </div>
       </div>
 
-      {/* Sección de Íconos en la Parte Inferior */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 p-6 bg-dark-blue bg-opacity-60 w-full text-center text-sm md:text-base">
+      {/* Sección de Servicios */}
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
         {[
-          { icon: "/images/icon-justice.png", title: "HOME", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-          { icon: "/images/icon-service.png", title: "OUR SERVICES", text: "Offering a variety of legal services tailored to your needs." },
-          { icon: "/images/icon-about.png", title: "ABOUT US", text: "Experienced attorneys dedicated to justice and integrity." },
-          { icon: "/images/icon-justice.png", title: "OUR TEAM", text: "Meet our professional team of lawyers and experts." },
-          { icon: "/images/icon-contact.png", title: "CONTACT US", text: "Get in touch for more information and assistance." },
+          {
+            icon: (
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="50" height="50" className="text-gold-dark">
+                <path d="M12 2L1 9l1 1v11h9V14h2v7h9V10l1-1L12 2zM12 4.24L18.8 9H5.2L12 4.24zM3 11v7h2v-7H3zm16 7v-7h2v7h-2z"/>
+              </svg>
+            ),
+            title: "Business Focused",
+            text: "Clear, concise, and strategic advice focused on helping you achieve and exceed your business objectives."
+          },
+          {
+            icon: (
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="50" height="50" className="text-gold-dark">
+                <path d="M5 19h14v2H5zm7-16L3 9v2h18V9L12 3zm0 2.47L16.76 9H7.24L12 5.47z"/>
+              </svg>
+            ),
+            title: "Legal Counsel",
+            text: "Expert, reliable guidance to help you navigate complex legal challenges with confidence and precision."
+          },
+          {
+            icon: (
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="50" height="50" className="text-gold-dark">
+                <path d="M5 5h14v14H5z" fill="none"/><path d="M12 7a5 5 0 100 10 5 5 0 000-10z"/>
+              </svg>
+            ),
+            title: "Judicial Results",
+            text: "A proven track record of successful judicial outcomes, ensuring your interests are expertly defended."
+          },
+          {
+            icon: (
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="50" height="50" className="text-gold-dark">
+                <path d="M12 3L1 9v11h22V9L12 3zM12 5.19L20 10.27v8.73h-4v-6h-8v6H4V10.27L12 5.19z"/>
+              </svg>
+            ),
+            title: "Strategic Planning",
+            text: "Tailored, forward-thinking strategies designed to safeguard and strengthen your business interests."
+          },
         ].map((item, index) => (
           <motion.div
             key={index}
-            className="flex flex-col items-center space-y-2"
+            className="flex flex-col items-center text-center p-4 bg-dark-blue bg-opacity-80 rounded-lg hover:shadow-lg transition-shadow"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 + index * 0.1 }}
           >
-            <Image src={item.icon} alt={item.title} width={50} height={50} />
-            <h3 className="text-gold font-semibold">{item.title}</h3>
-            <p className="text-gray-300">{item.text}</p>
+            {item.icon}
+            <h3 className="text-lg md:text-xl font-semibold mt-4 text-gold-dark">{item.title}</h3>
+            <p className="text-sm md:text-base lg:text-lg text-gray-200 mt-2">{item.text}</p>
           </motion.div>
         ))}
       </div>
-    </motion.section>
+    </section>
   );
 }

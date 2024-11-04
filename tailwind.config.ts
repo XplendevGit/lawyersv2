@@ -11,6 +11,11 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'dark-blue': '#1a202c',
+        'gold-dark': '#b39b4e', // Oro oscuro para profesionalismo
+        'gold-light': '#d4af37', // Oro claro para efecto hover
+        'blue-dark': '#0f172a', // Azul oscuro para botones
+        'gray-200': '#e5e7eb', // Gris claro para subtítulos y textos
       },
     },
   },
