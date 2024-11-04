@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Inicio() {
   return (
-    <section className="relative h-screen text-white flex flex-col items-start justify-center px-6 md:px-10 lg:px-20">
+    <section className="relative h-full md:h-screen text-white flex flex-col items-start justify-center px-6 md:px-10 lg:px-20 pt-[190px] lg:pt-0 shadow-md shadow-gold-dark">
       {/* Imagen de Fondo */}
       <div className="absolute inset-0 -z-10">
         <Image
@@ -15,12 +15,14 @@ export default function Inicio() {
           objectFit="cover"
           quality={100}
         />
+        {/* Overlay para oscurecer la imagen */}
+        <div className="absolute inset-0 bg-black opacity-50"></div>
       </div>
 
       {/* Título y Subtítulo */}
       <div className="max-w-lg md:max-w-xl lg:max-w-2xl">
         <motion.h1
-          className="text-3xl md:text-5xl lg:text-6xl font-bold text-gold-dark"
+          className="text-center md:text-start text-4xl md:text-5xl lg:text-6xl font-bold text-gold-dark"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3 }}
@@ -28,7 +30,7 @@ export default function Inicio() {
           We’re Built on Relationships
         </motion.h1>
         <motion.p
-          className="mt-4 text-base md:text-lg lg:text-xl text-gray-200"
+          className="mt-4 text-center md:text-start text-base md:text-lg lg:text-xl text-gray-200"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
@@ -37,7 +39,7 @@ export default function Inicio() {
         </motion.p>
 
         {/* Botones */}
-        <div className="mt-6 flex flex-wrap gap-4">
+        <div className="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
           <motion.a
             href="#services"
             className="bg-gold-dark text-white px-4 py-2 rounded-full font-semibold hover:bg-gold-light transition"
@@ -60,7 +62,7 @@ export default function Inicio() {
       </div>
 
       {/* Sección de Servicios */}
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      <div className="mt-12 lg:pt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 py-12 md:py-0">
         {[
           {
             icon: (

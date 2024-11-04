@@ -4,22 +4,24 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { MenuIcon, XIcon } from '@heroicons/react/solid';
+import Link from 'next/link';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <motion.header
-      className="fixed w-full bg-dark-blue text-white z-50 shadow-md"
+      className="fixed w-full bg-dark-blue text-white z-50 shadow-sm shadow-gold-dark"
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
-        <motion.div className="flex items-center space-x-2" whileHover={{ scale: 1.05 }}>
+        <Link href={'http://localhost:3000/'}>
+        <motion.div className="flex items-center space-x-2 cursor-pointer">
           <Image 
-            className="w-[100px] h-auto md:w-[120px]" // Ajuste de tamaño para dispositivos móviles
+            className="w-[90px] h-auto md:w-[90px]" // Ajuste de tamaño para dispositivos móviles
             src="https://i.postimg.cc/wjQspNGQ/logo0.png" 
             alt="Law Firm Logo" 
             width={450} 
@@ -27,28 +29,24 @@ export default function Header() {
             priority={true}
           />
         </motion.div>
+        </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6">
-          {['Home', 'Services', 'About', 'Contact'].map((item, index) => (
-            <motion.a
-              key={index}
-              href={`#${item.toLowerCase()}`}
-              className="hover:text-gray-300 transition-all duration-200"
-              whileHover={{ scale: 1.1 }}
-            >
-              {item.toUpperCase()}
-            </motion.a>
-          ))}
-          {/* Botón de Contacto */}
-          <motion.a
-            href="#contact"
-            className="bg-gold text-dark-blue px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition"
-            whileHover={{ scale: 1.05 }}
-          >
-            CONTACT
-          </motion.a>
-        </nav>
+{/* Desktop Navigation */}
+<nav className="hidden md:flex space-x-6">
+  {['Home', 'Services', 'About', 'Contact'].map((item, index) => (
+    <a
+      key={index}
+      href={`#${item.toLowerCase()}`}
+      className="relative text-white hover:text-gold-dark transition-all duration-200 
+                after:content-[''] after:absolute after:left-1/2 after:bottom-0 
+                after:w-0 after:h-[2px] after:bg-gold-dark after:transition-all 
+                after:duration-300 hover:after:w-full hover:after:left-0"
+    >
+      {item.toUpperCase()}
+    </a>
+  ))}
+</nav>
+
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
@@ -74,7 +72,10 @@ export default function Header() {
             <a
               key={index}
               href={`#${item.toLowerCase()}`}
-              className="block text-lg font-semibold hover:text-gray-300 transition-all duration-200"
+              className="block text-lg font-semibold hover:text-gold-dark transition-all duration-200 
+                after:content-[''] after:absolute after:left-1/2 after:bottom-0 
+                after:w-0 after:h-[2px] after:transition-all 
+                after:duration-300 hover:after:w-full hover:after:left-0"
               onClick={() => setIsOpen(false)}
             >
               {item.toUpperCase()}
