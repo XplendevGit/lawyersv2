@@ -20,10 +20,10 @@ export default function ExperienceSection() {
           Experienced <span className="text-gold-dark">And Trusted</span>
         </h2>
         <p className="mt-4 text-gray-700 text-lg">
-        Our attorneys think like business people, with extensive backgrounds in both law and business. This unique perspective helps us address the complex challenges our clients face in achieving success and growth. We provide strategic, proactive solutions tailored to each clients needs, building strong, lasting relationships founded on trust and integrity.
+          Our attorneys think like business people, with extensive backgrounds in both law and business. This unique perspective helps us address the complex challenges our clients face in achieving success and growth. We provide strategic, proactive solutions tailored to each clients needs, building strong, lasting relationships founded on trust and integrity.
         </p>
         <p className="text-gray-700 text-lg">
-        Our commitment to excellence empowers clients to operate with confidence, knowing they have a legal partner dedicated to their long-term success and prepared to anticipate and prevent potential challenges.
+          Our commitment to excellence empowers clients to operate with confidence, knowing they have a legal partner dedicated to their long-term success and prepared to anticipate and prevent potential challenges.
         </p>
 
         {/* Icon Section */}
@@ -94,12 +94,12 @@ export default function ExperienceSection() {
 
       {/* Image Section */}
       <motion.div
-        className="lg:w-1/2 mt-10 lg:mt-0"
+        className="lg:w-1/2 mt-10 lg:mt-0 flex justify-center"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="relative w-full h-80 lg:h-full bg-transparent overflow-hidden flex justify-center object-center mx-auto">
+        <div className="relative w-3/4 md:w-1/2 lg:w-full h-80 lg:h-[500px] rounded-lg overflow-hidden justify-center flex">
           <Image
             src="https://i.postimg.cc/rmwFPnrW/trust-2.png"
             alt="Experienced Lawyer"
@@ -113,4 +113,3 @@ export default function ExperienceSection() {
     </section>
   );
 }
-        
