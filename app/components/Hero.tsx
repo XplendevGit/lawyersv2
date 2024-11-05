@@ -16,7 +16,7 @@ export default function Hero() {
         <p className="text-sm text-gray-500 uppercase tracking-wide">
           Your business is safe with us
         </p>
-        <h1 className="text-4xl md:text-5xl text-center md:text-start font-bold text-dark-blue leading-tight">
+        <h1 className="text-4xl md:text-5xl md:text-start font-bold text-dark-blue leading-tight">
           Committed to <span className="text-gold-dark">Your Business</span>
         </h1>
         <p className="mt-4 text-gray-700 text-lg">

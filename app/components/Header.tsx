@@ -9,44 +9,51 @@ import Link from 'next/link';
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const smoothScroll = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      setIsOpen(false); // Close mobile menu if open
+    }
+  };
+
   return (
     <motion.header
-      className="fixed w-full bg-dark-blue text-white z-50 shadow-sm shadow-gold-dark"
+      className="fixed w-full bg-black text-white z-50 shadow-sm shadow-gold-dark"
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
-        <Link href={'http://localhost:3000/'}>
-        <motion.div className="flex items-center space-x-2 cursor-pointer">
-          <Image 
-            className="w-[90px] h-auto md:w-[90px]" // Ajuste de tamaño para dispositivos móviles
-            src="https://i.postimg.cc/wjQspNGQ/logo0.png" 
-            alt="Law Firm Logo" 
-            width={450} 
-            height={450} 
-            priority={true}
-          />
-        </motion.div>
+        <Link href={'/'}>
+          <motion.div className="flex items-center space-x-2 cursor-pointer">
+            <Image 
+              className="w-[80px] h-auto md:w-[80px]"
+              src="https://i.postimg.cc/wjQspNGQ/logo0.png" 
+              alt="Law Firm Logo" 
+              width={450} 
+              height={450} 
+              priority={true}
+            />
+          </motion.div>
         </Link>
 
-{/* Desktop Navigation */}
-<nav className="hidden md:flex space-x-6">
-  {['Home', 'Services', 'About', 'Contact'].map((item, index) => (
-    <a
-      key={index}
-      href={`#${item.toLowerCase()}`}
-      className="relative text-white hover:text-gold-dark transition-all duration-200 
-                after:content-[''] after:absolute after:left-1/2 after:bottom-0 
-                after:w-0 after:h-[2px] after:bg-gold-dark after:transition-all 
-                after:duration-300 hover:after:w-full hover:after:left-0"
-    >
-      {item.toUpperCase()}
-    </a>
-  ))}
-</nav>
-
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex space-x-6 pt-8">
+          {['Home', 'Trust', 'Support', 'Contact'].map((item, index) => (
+            <button
+              key={index}
+              onClick={() => smoothScroll(item.toLowerCase())}
+              className="relative hover:text-gold-dark transition-all duration-200 
+                        after:content-[''] after:absolute after:left-1/2 after:bottom-0 
+                        after:w-0 after:h-[2px] after:bg-gold-dark after:transition-all 
+                        after:duration-300 hover:after:w-full hover:after:left-0 text-gray-400"
+            >
+              {item.toUpperCase()}
+            </button>
+          ))}
+        </nav>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
@@ -63,31 +70,24 @@ export default function Header() {
       {/* Mobile Menu */}
       {isOpen && (
         <motion.nav
-          className="md:hidden bg-dark-blue text-center space-y-4 py-4 absolute w-full top-full shadow-lg"
+          className="md:hidden bg-black/90 text-center space-y-4 py-4 flex flex-col w-full top-full shadow-lg"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
-          {['Home', 'Services', 'About', 'Contact'].map((item, index) => (
-            <a
+          {['Home', 'Trust', 'Support', 'Contact'].map((item, index) => (
+            <button
               key={index}
-              href={`#${item.toLowerCase()}`}
+              onClick={() => smoothScroll(item.toLowerCase())}
               className="block text-lg font-semibold hover:text-gold-dark transition-all duration-200 
-                after:content-[''] after:absolute after:left-1/2 after:bottom-0 
-                after:w-0 after:h-[2px] after:transition-all 
-                after:duration-300 hover:after:w-full hover:after:left-0"
-              onClick={() => setIsOpen(false)}
+                        after:content-[''] after:absolute after:left-1/2 after:bottom-0 
+                        after:w-0 after:h-[2px] after:transition-all 
+                        after:duration-300 hover:after:w-full hover:after:left-0"
             >
               {item.toUpperCase()}
-            </a>
+            </button>
           ))}
-          <a
-            href="#contact"
-            className="bg-gold text-dark-blue px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition block mx-auto mt-2 w-3/4"
-            onClick={() => setIsOpen(false)}
-          >
-            CONTACT
-          </a>
+
         </motion.nav>
       )}
     </motion.header>

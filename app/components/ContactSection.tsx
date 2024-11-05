@@ -18,7 +18,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-center min-h-screen bg-dark-blue text-white">
+    <section className="flex flex-col lg:flex-row items-center justify-center min-h-screen bg-dark-blue text-white shadow-sm shadow-gold-dark">
       {/* Form Section */}
       <motion.div
         className="lg:w-2/3 p-10 lg:p-20 bg-opacity-50 backdrop-blur-lg"

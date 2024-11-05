@@ -14,23 +14,40 @@ export default function Home() {
     <Header>
     </Header>
     
+    <section className="" id="home">
     <Inicio>
     </Inicio>
+    </section>
 
+    <section className="" id="trust">
     <Hero>
     </Hero>
+    </section>
 
+
+    <section className="" id="banner">
     <BannerStats>
     </BannerStats>
+    </section>
 
+
+    <section className="" id="support">
     <ExperienceSection>
     </ExperienceSection>
+    </section>
 
+
+    <section className="" id="contact">
     <ContactSection>
     </ContactSection>
+    </section>
 
+
+    <section className="" id="footer">
     <Footer>
     </Footer>
+    </section>
+
     
     </>
   );

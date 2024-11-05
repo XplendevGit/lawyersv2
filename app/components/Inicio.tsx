@@ -41,7 +41,7 @@ export default function Inicio() {
         {/* Botones */}
         <div className="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
           <motion.a
-            href="#services"
+            href="#trust"
             className="bg-gold-dark text-white px-4 py-2 rounded-full font-semibold hover:bg-gold-light transition"
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
@@ -50,7 +50,7 @@ export default function Inicio() {
             Legal Services
           </motion.a>
           <motion.a
-            href="#meet"
+            href="#contact"
             className="bg-dark-blue px-4 py-2 rounded-full font-semibold text-white hover:bg-blue-dark transition"
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
