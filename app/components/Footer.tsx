@@ -55,7 +55,7 @@ export default function Header() {
         <a href="https://xplendev.com/" className="hover:text-gold-dark transition-all duration-200 
                         after:content-[''] after:absolute after:left-1/2 after:bottom-0 
                         after:w-0 after:h-[2px] after:transition-all 
-                        after:duration-300 hover:after:w-full hover:after:left-0">© 2024 Xplendev. All rights reserved.</a>
+                        after:duration-300 hover:after:w-full hover:after:left-0 text-center md:text-start mx-auto md:mx-0">© 2024 Xplendev. All rights reserved.</a>
         <p className="hidden md:block">
           Designed with precision for the ultimate user experience.
         </p>
