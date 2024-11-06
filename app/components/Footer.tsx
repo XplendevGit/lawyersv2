@@ -16,7 +16,7 @@ export default function Header() {
           transition={{ duration: 0.5 }}
         >
           {/* Logo Icon */}
-          <div className="w-40 md:w-32 h-32">
+          <div className="w-44 md:w-32 h-32">
             <Image
               src="https://i.postimg.cc/wjQspNGQ/logo0.png" // URL de tu imagen
               alt="Logo"
