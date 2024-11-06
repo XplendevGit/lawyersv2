@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="bg-dark-gray text-gray-400 py-6 px-4 md:px-10 lg:px-20">
+    <header className="bg-[#0A0A0A] text-gray-400 py-6 px-4 md:px-10 lg:px-20">
       <div className="flex flex-col md:flex-row items-center justify-between">
         {/* Logo and Description */}
         <motion.div
