@@ -15,7 +15,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Lawyers",
-  description: "Defendiendo tus derechos con integridad y compromiso",
+  description: "Defendiendo tus derechos con integridad y compromiso - Designed By Xplendev",
 };
 
 export default function RootLayout({
