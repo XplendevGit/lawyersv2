@@ -82,7 +82,7 @@ export default function ExperienceSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 * index }}
             >
-              <div className="flex items-center justify-center w-12 h-12 rounded-full bg-dark-blue">
+              <div className="flex items-center justify-center w-14 h-14 rounded-full bg-dark-blue border-2 border-transparent hover:border-gold-dark transition-all duration-150 ease-in">
                 {item.icon}
               </div>
               <h3 className="text-lg font-semibold text-gold-dark">{item.title}</h3>

@@ -70,7 +70,7 @@ export default function Hero() {
           ].map((item, index) => (
             <motion.div
               key={index}
-              className={`flex items-center p-4 rounded-lg ${item.bgColor} bg-opacity-80`}
+              className={`flex items-center p-4 rounded-lg ${item.bgColor} bg-opacity-80 border-2 border-transparent hover:border-black transition-all duration-150`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 * index }}
@@ -92,7 +92,7 @@ export default function Hero() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="relative w-full lg:w-[90%] max-w-md bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="relative w-full lg:w-[90%] max-w-md bg-white rounded-lg shadow-lg overflow-hidden border-2 hover:border-black border-transparent transition-all duration-150">
           <Image
             src="https://i.postimg.cc/L504TmXw/img1.jpg"
             alt="Business Meeting"
